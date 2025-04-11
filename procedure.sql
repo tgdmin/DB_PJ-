@@ -5,7 +5,7 @@ CREATE OR REPLACE PROCEDURE add_book(
 )
 LANGUAGE SQL
 AS $$
-INSERT INTO books(title, price, publisher_id)
-VALUES (title, price, publisher_id)
+INSERT INTO books(id, title, price, stock_quantity, publisher_id)
+VALUES (id, title, price, stock_quantity, publisher_id)
 RETURNING id;
 $$;
